@@ -11,14 +11,16 @@ public class ArvoreMaiorValorNivel {
 
    public static List<Integer> maiorValorPorNivel(TreeInt tree) {
       List<Integer> maior = new ArrayList<>();
-      if (tree.getRoot()==null) return null;
+      if (tree.getRoot()==null) {
+         System.out.println("Não há nós na árvore.");
+         return null;
+      }
       Node node = tree.getRoot();
-      int level = 0;
       Queue<Node> queueNode = new LinkedList<>();
       queueNode.add(node);
       while (!queueNode.isEmpty()){
          Queue<Integer> fila = new LinkedList<>();
-         int counter = (int) Math.pow(2, (double) level);
+         int counter = queueNode.size();
          while (counter>0) {
             node = queueNode.remove();
             fila.add(node.getValue());
@@ -30,16 +32,14 @@ public class ArvoreMaiorValorNivel {
             }
             counter--;
          }
-         int maiorElemento=0;
          if (fila.size()==1) {
-            maiorElemento = fila.remove();
+            maior.add(fila.remove());
          } else {
+            maior.add(fila.remove());
             while (!fila.isEmpty()){
-               maiorElemento = Math.max(maiorElemento, fila.remove());
+               maior.set(maior.size()-1, Math.max(maior.getLast(), fila.remove()));
             }
          }
-         maior.add(maiorElemento);
-         level++;
       }
       return maior;
    }
@@ -56,11 +56,9 @@ public class ArvoreMaiorValorNivel {
       tree.insert(33);
       tree.insert(45);
       tree.insert(16);
-      tree.insert(8);
       tree.insert(104);
       tree.insert(88);
-      tree.insert(106);
-      tree.insert(10);
+      tree.insert(110);
 
       System.out.println("########################");
       System.out.println(maiorValorPorNivel(tree));
