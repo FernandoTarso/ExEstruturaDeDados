@@ -24,21 +24,13 @@ public class ArvoreMaiorValorNivel {
          while (counter>0) {
             node = queueNode.remove();
             fila.add(node.getValue());
-            if (node.getLeft()!=null) {
-               queueNode.add(node.getLeft());
-            }
-            if (node.getRight()!=null) {
-               queueNode.add(node.getRight());
-            }
+            if (node.getLeft()!=null) queueNode.add(node.getLeft());
+            if (node.getRight()!=null) queueNode.add(node.getRight());
             counter--;
          }
-         if (fila.size()==1) {
-            maior.add(fila.remove());
-         } else {
-            maior.add(fila.remove());
-            while (!fila.isEmpty()){
-               maior.set(maior.size()-1, Math.max(maior.getLast(), fila.remove()));
-            }
+         maior.add(fila.remove());
+         while (!fila.isEmpty()){
+            maior.set(maior.size()-1, Math.max(maior.getLast(), fila.remove()));
          }
       }
       return maior;
