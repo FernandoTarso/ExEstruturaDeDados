@@ -8,7 +8,7 @@ public class Node {
    private Node left;
    private Node right;
 
-   public Node() {}
+//   public Node() {}
 
    public Node(String data) {
       this.data = data;
@@ -16,7 +16,6 @@ public class Node {
    public Node(int value) {
       this.value = value;
    }
-
 
    public int getValue() {
       return value;
@@ -32,18 +31,18 @@ public class Node {
       this.data = data;
    }
 
-   public void setLeft(Node left) {
-      this.left = left;
-   }
    public Node getLeft() {
       return this.left;
    }
-
-   public void setRight(Node right) {
-      this.right = right;
+   public void setLeft(Node left) {
+      this.left = left;
    }
+
    public Node getRight() {
       return this.right;
+   }
+   public void setRight(Node right) {
+      this.right = right;
    }
 
    public Node getNext() {

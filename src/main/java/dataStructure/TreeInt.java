@@ -79,40 +79,6 @@ public class TreeInt {
          System.out.println(node.getValue());
       }
    }
-//   public List<Integer> maiorValorPorNivel() {
-//      List<Integer> maior = new ArrayList<>();
-//      if (root==null) return null;
-//      Node node = root;
-//      int level = 0;
-//      Queue<Node> queueNode = new LinkedList<>();
-//      queueNode.add(node);
-//      while (!queueNode.isEmpty()){
-//         Queue<Integer> fila = new LinkedList<>();
-//         int counter = (int) Math.pow(2, (double) level);
-//         while (counter>0) {
-//            node = queueNode.remove();
-//            fila.add(node.getValue());
-//            if (node.getLeft()!=null) {
-//               queueNode.add(node.getLeft());
-//            }
-//            if (node.getRight()!=null) {
-//               queueNode.add(node.getRight());
-//            }
-//            counter--;
-//         }
-//         int maiorElemento=0;
-//         if (fila.size()==1) {
-//            maiorElemento = fila.remove();
-//         } else {
-//            while (!fila.isEmpty()){
-//               maiorElemento = Math.max(maiorElemento, fila.remove());
-//            }
-//         }
-//         maior.add(maiorElemento);
-//         level++;
-//      }
-//      return maior;
-//   }
 
    public static void main(String[] args) {
       TreeInt tree = new TreeInt();
