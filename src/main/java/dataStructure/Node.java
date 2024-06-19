@@ -2,11 +2,11 @@ package dataStructure;
 
 public class Node {
 
-   int value;
-   String data;
-   Node next;
-   Node left;
-   Node right;
+   private int value;
+   private String data;
+   private Node next;
+   private Node left;
+   private Node right;
 
    public Node() {}
 
@@ -28,6 +28,9 @@ public class Node {
    public String getData() {
       return data;
    }
+   public void setData(String data) {
+      this.data = data;
+   }
 
    public void setLeft(Node left) {
       this.left = left;
@@ -43,8 +46,14 @@ public class Node {
       return this.right;
    }
 
+   public Node getNext() {
+      return next;
+   }
+   public void setNext(Node next) {
+      this.next = next;
+   }
+
    public boolean isLeaf() {
       return this.left==null && this.right==null;
    }
-
 }

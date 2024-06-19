@@ -1,8 +1,6 @@
 package dataStructure;
 import java.lang.*;
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 public class TreeInt {
@@ -17,17 +15,17 @@ public class TreeInt {
          queue.add(root);
          while (!queue.isEmpty()) {
             Node currentNode = queue.remove();
-            if (currentNode.left==null) {
-               currentNode.left = newNode;
+            if (currentNode.getLeft()==null) {
+               currentNode.setLeft(newNode);
                break;
             } else {
-               queue.add(currentNode.left);
+               queue.add(currentNode.getLeft());
             }
-            if (currentNode.right==null) {
-               currentNode.right = newNode;
+            if (currentNode.getRight()==null) {
+               currentNode.setRight(newNode);
                break;
             } else {
-               queue.add(currentNode.right);
+               queue.add(currentNode.getRight());
             }
          }
       }
@@ -39,9 +37,9 @@ public class TreeInt {
    private void preOrder(final Node node) {
       // R-E-D
       if (node==null) return;
-      System.out.println(node.value);
-      preOrder(node.left);
-      preOrder(node.right);
+      System.out.println(node.getValue());
+      preOrder(node.getLeft());
+      preOrder(node.getRight());
    }
 
    public Node getRoot() {
@@ -54,9 +52,9 @@ public class TreeInt {
    private void inOrder(final Node node) {
       // E-R-D
       if (node==null) return;
-      inOrder(node.left);
-      System.out.println(node.value);
-      inOrder(node.right);
+      inOrder(node.getLeft());
+      System.out.println(node.getValue());
+      inOrder(node.getRight());
    }
 
    public void postOrder() {
@@ -65,9 +63,9 @@ public class TreeInt {
    private void postOrder(final Node node) {
       // E-D-R
       if (node==null) return;
-      postOrder(node.left);
-      postOrder(node.right);
-      System.out.println(node.value);
+      postOrder(node.getLeft());
+      postOrder(node.getRight());
+      System.out.println(node.getValue());
    }
 
    public void bfs() {
@@ -76,9 +74,9 @@ public class TreeInt {
       queue.add(root);
       while (!queue.isEmpty()) {
          Node node = queue.remove();
-         if (node.left!=null) queue.add(node.left);
-         if (node.right!=null) queue.add(node.right);
-         System.out.println(node.value);
+         if (node.getLeft()!=null) queue.add(node.getLeft());
+         if (node.getRight()!=null) queue.add(node.getRight());
+         System.out.println(node.getValue());
       }
    }
 //   public List<Integer> maiorValorPorNivel() {
@@ -93,12 +91,12 @@ public class TreeInt {
 //         int counter = (int) Math.pow(2, (double) level);
 //         while (counter>0) {
 //            node = queueNode.remove();
-//            fila.add(node.value);
-//            if (node.left!=null) {
-//               queueNode.add(node.left);
+//            fila.add(node.getValue());
+//            if (node.getLeft()!=null) {
+//               queueNode.add(node.getLeft());
 //            }
-//            if (node.right!=null) {
-//               queueNode.add(node.right);
+//            if (node.getRight()!=null) {
+//               queueNode.add(node.getRight());
 //            }
 //            counter--;
 //         }
@@ -141,12 +139,12 @@ public class TreeInt {
       tree.bfs();
       System.out.println("########################");
 
-//      System.out.println(tree.root.value);
+//      System.out.println(tree.root.getValue());
 //      System.out.println(tree.root.isLeaf());
-//      System.out.println(tree.root.left.value);
-//      System.out.println(tree.root.left.isLeaf());
-//      System.out.println(tree.root.right.value);
-//      System.out.println(tree.root.right.isLeaf());
+//      System.out.println(tree.root.getLeft().getValue());
+//      System.out.println(tree.root.getLeft().isLeaf());
+//      System.out.println(tree.root.getRight().getValue());
+//      System.out.println(tree.root.getRight().isLeaf());
    }
 
 
