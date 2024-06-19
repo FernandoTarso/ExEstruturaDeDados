@@ -1,5 +1,5 @@
 package Exercicios;
-import dataStructure.NodeInt;
+import dataStructure.Node;
 import dataStructure.TreeInt;
 
 import java.util.ArrayList;
@@ -12,21 +12,21 @@ public class ArvoreMaiorValorNivel {
    public static List<Integer> maiorValorPorNivel(TreeInt tree) {
       List<Integer> maior = new ArrayList<>();
       if (tree.getRoot()==null) return null;
-      NodeInt node = tree.getRoot();
+      Node node = tree.getRoot();
       int level = 0;
-      Queue<NodeInt> queueNode = new LinkedList<>();
+      Queue<Node> queueNode = new LinkedList<>();
       queueNode.add(node);
       while (!queueNode.isEmpty()){
          Queue<Integer> fila = new LinkedList<>();
          int counter = (int) Math.pow(2, (double) level);
          while (counter>0) {
             node = queueNode.remove();
-            fila.add(node.value);
-            if (node.left!=null) {
-               queueNode.add(node.left);
+            fila.add(node.getValue());
+            if (node.getLeft()!=null) {
+               queueNode.add(node.getLeft());
             }
-            if (node.right!=null) {
-               queueNode.add(node.right);
+            if (node.getRight()!=null) {
+               queueNode.add(node.getRight());
             }
             counter--;
          }

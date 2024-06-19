@@ -7,16 +7,16 @@ import java.util.Queue;
 
 public class TreeInt {
 
-   private NodeInt root;
+   private Node root;
 
    public void insert(int value) {
-      if (root==null) root = new NodeInt(value);
+      if (root==null) root = new Node(value);
       else {
-         NodeInt newNode = new NodeInt(value);
-         Queue<NodeInt> queue = new LinkedList<>();
+         Node newNode = new Node(value);
+         Queue<Node> queue = new LinkedList<>();
          queue.add(root);
          while (!queue.isEmpty()) {
-            NodeInt currentNode = queue.remove();
+            Node currentNode = queue.remove();
             if (currentNode.left==null) {
                currentNode.left = newNode;
                break;
@@ -36,7 +36,7 @@ public class TreeInt {
    public void preOrder() {
       preOrder(root);
    }
-   private void preOrder(final NodeInt node) {
+   private void preOrder(final Node node) {
       // R-E-D
       if (node==null) return;
       System.out.println(node.value);
@@ -44,14 +44,14 @@ public class TreeInt {
       preOrder(node.right);
    }
 
-   public NodeInt getRoot() {
+   public Node getRoot() {
       return root;
    }
 
    public void inOrder() {
       inOrder(root);
    }
-   private void inOrder(final NodeInt node) {
+   private void inOrder(final Node node) {
       // E-R-D
       if (node==null) return;
       inOrder(node.left);
@@ -62,7 +62,7 @@ public class TreeInt {
    public void postOrder() {
       postOrder(root);
    }
-   private void postOrder(final NodeInt node) {
+   private void postOrder(final Node node) {
       // E-D-R
       if (node==null) return;
       postOrder(node.left);
@@ -72,10 +72,10 @@ public class TreeInt {
 
    public void bfs() {
       if (root==null) return;
-      Queue<NodeInt> queue = new LinkedList<>();
+      Queue<Node> queue = new LinkedList<>();
       queue.add(root);
       while (!queue.isEmpty()) {
-         NodeInt node = queue.remove();
+         Node node = queue.remove();
          if (node.left!=null) queue.add(node.left);
          if (node.right!=null) queue.add(node.right);
          System.out.println(node.value);
@@ -84,9 +84,9 @@ public class TreeInt {
 //   public List<Integer> maiorValorPorNivel() {
 //      List<Integer> maior = new ArrayList<>();
 //      if (root==null) return null;
-//      NodeInt node = root;
+//      Node node = root;
 //      int level = 0;
-//      Queue<NodeInt> queueNode = new LinkedList<>();
+//      Queue<Node> queueNode = new LinkedList<>();
 //      queueNode.add(node);
 //      while (!queueNode.isEmpty()){
 //         Queue<Integer> fila = new LinkedList<>();

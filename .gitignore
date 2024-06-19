@@ -39,7 +39,6 @@ build/
 ### Mac OS ###
 .DS_Store
 /src/main/java/dataStructure/Tree.java
-/src/main/java/dataStructure/Node.java
 /src/main/java/dataStructure/BinarySearchTree.java
 /src/main/java/dataStructure/LinkedList.java
 /src/main/java/dataStructure/Queue.java

@@ -1,6 +1,6 @@
 package Exercicios;
 
-import dataStructure.NodeInt;
+import dataStructure.Node;
 import dataStructure.TreeInt;
 
 import java.util.ArrayList;
@@ -14,18 +14,18 @@ public class SolucaoArvoreMaiorValorNivel {
       return list;
    }
 
-   private static void solveTree(NodeInt node,
+   private static void solveTree(Node node,
                                  int level,
                                  ArrayList<Integer> list) {
       if (node == null) return;
       if (level == list.size()) {
-         list.add(node.value);
+         list.add(node.getValue());
       } else {
-         list.set(level, Math.max(list.get(level), node.value));
+         list.set(level, Math.max(list.get(level), node.getValue()));
       }
 
-      solveTree(node.left, level+1, list);
-      solveTree(node.right, level+1, list);
+      solveTree(node.getLeft(), level+1, list);
+      solveTree(node.getRight(), level+1, list);
    }
 
    public static void main(String[] args) {
