@@ -1,7 +1,6 @@
 package Exercicios;
 import dataStructure.Node;
-import dataStructure.TreeInt;
-
+import dataStructure.Tree;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -9,7 +8,7 @@ import java.util.Queue;
 
 public class ArvoreMaiorValorNivel {
 
-   public static List<Integer> maiorValorPorNivel(TreeInt tree) {
+   public static List<Integer> maiorValorPorNivel(Tree tree) {
       List<Integer> maior = new ArrayList<>();
       if (tree.getRoot()==null) {
          System.out.println("Não há nós na árvore.");
@@ -37,7 +36,7 @@ public class ArvoreMaiorValorNivel {
    }
    public static void main(String[] args) {
 
-      TreeInt tree = new TreeInt();
+      Tree tree = new Tree();
       tree.insert(5);
       tree.insert(7);
       tree.insert(2);

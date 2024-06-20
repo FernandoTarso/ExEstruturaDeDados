@@ -38,11 +38,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
-/src/main/java/dataStructure/Tree.java
-/src/main/java/dataStructure/BinarySearchTree.java
-/src/main/java/dataStructure/LinkedList.java
-/src/main/java/dataStructure/Queue.java
-/src/main/java/dataStructure/Stack.java
 /src/main/resources/
 /src/test/
 /pom.xml

@@ -1,14 +1,13 @@
 package Exercicios;
 
 import dataStructure.Node;
-import dataStructure.TreeInt;
-
+import dataStructure.Tree;
 import java.util.ArrayList;
 import java.util.List;
 
 public class SolucaoArvoreMaiorValorNivel {
 
-   public static List<Integer> maioresValores(TreeInt tree) {
+   public static List<Integer> maioresValores(Tree tree) {
       var list = new ArrayList<Integer>();
       solveTree(tree.getRoot(), 0, list);
       return list;
@@ -29,7 +28,7 @@ public class SolucaoArvoreMaiorValorNivel {
    }
 
    public static void main(String[] args) {
-      TreeInt tree = new TreeInt();
+      Tree tree = new Tree();
       tree.insert(5);
       tree.insert(7);
       tree.insert(2);

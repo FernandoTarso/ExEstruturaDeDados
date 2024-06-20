@@ -2,7 +2,7 @@ package dataStructure;
 
 public class Node {
 
-   private int value;
+   private Integer value;
    private String data;
    private Node next;
    private Node left;
@@ -13,14 +13,14 @@ public class Node {
    public Node(String data) {
       this.data = data;
    }
-   public Node(int value) {
+   public Node(Integer value) {
       this.value = value;
    }
 
-   public int getValue() {
+   public Integer getValue() {
       return value;
    }
-   public void setValue(int value) {
+   public void setValue(Integer value) {
       this.value = value;
    }
 
