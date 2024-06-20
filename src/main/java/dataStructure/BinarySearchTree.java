@@ -74,31 +74,4 @@ public class BinarySearchTree {
       }
       return root;
    }
-
-   public static void main(String[] args) {
-
-      BinarySearchTree bst = new BinarySearchTree();
-      bst.insert(2);
-      bst.insert(1);
-      bst.insert(3);
-      bst.insert(5);
-      bst.insert(7);
-      bst.insert(8);
-      bst.insert(6);
-      bst.insert(10);
-
-      System.out.println("---1---");
-      System.out.println(bst.contains(4));
-
-      System.out.println("---2---");
-      System.out.println(bst.contains(2));
-
-      System.out.println("---3---");
-      bst.inOrder();
-
-      bst.deleteNode(6);
-
-      System.out.println("---4---");
-      bst.inOrder();
-   }
 }

@@ -105,39 +105,4 @@ public class Tree {
          System.out.println(node.getData());
       }
    }
-
-   public static void main(String[] args) {
-      Tree tree = new Tree();
-      tree.insert("A");
-      tree.insert("B");
-      tree.insert("C");
-      tree.insert("D");
-      tree.insert("E");
-      tree.insert("F");
-      tree.insert("G");
-
-      System.out.println("########################");
-      tree.preOrder();
-      System.out.println("########################");
-
-      System.out.println("########################");
-      tree.inOrder();
-      System.out.println("########################");
-
-      System.out.println("########################");
-      tree.postOrder();
-      System.out.println("########################");
-
-      System.out.println("########################");
-      tree.bfs();
-      System.out.println("########################");
-
-      System.out.println(tree.root.getData());
-      System.out.println(tree.root.isLeaf());
-      System.out.println(tree.root.getLeft().getData());
-      System.out.println(tree.root.getLeft().isLeaf());
-      System.out.println(tree.root.getRight().getData());
-      System.out.println(tree.root.getRight().isLeaf());
-   }
-
 }

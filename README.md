@@ -24,4 +24,7 @@ aprimorar a interação com os repos
 remotos (não dá pra só ficar 
 tacando no Hub pra sempre :).
 
-
+Edit: Inicialmente, não pretendia 
+colocar todas as estruturas estudadas,
+mas há (várias) oportunidades para
+aprendizado em cada uma delas.

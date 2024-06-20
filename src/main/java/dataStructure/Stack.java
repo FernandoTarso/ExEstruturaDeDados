@@ -80,6 +80,7 @@ public class Stack {
          System.out.println(data);
          newStack.push(data);
       }
+      System.out.println("####################");
       for (int i = 0; i < invertido.length; i++) {
          invertido[i] = newStack.pop().getData();
          System.out.println(invertido[i]);
